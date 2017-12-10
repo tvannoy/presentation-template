@@ -100,9 +100,9 @@ reveal.js presentations](LibreOffice-Draw.md).
 
 ### Running things locally
 
-If you want to run your slides locally, rather than on GitHub Pages,
-just drop them into the `DocumentRoot` of a web server, like Apache or
-[`lighttpd`](https://www.lighttpd.net/).
+If you want to run your slides locally, rather than on GitHub Pages, you can
+drop them into the `DocumentRoot` of a web server, like Apache or
+[`lighttpd`](https://www.lighttpd.net/), or host a web server via Python.
 
 For `lighttpd`, you may also want to set the following options:
 
@@ -111,6 +111,11 @@ dir-listing.encoding = "utf-8"
 server.dir-listing   = "enable"
 server.modules      += ( "mod_userdir" )
 userdir.path         = "public_html"
+```
+
+The easiest way to host the presentation is to run
+```bash
+python -m http.server 8000
 ```
 
 Use the provided `.gitmodules` file to automatically clone local
