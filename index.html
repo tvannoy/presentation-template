@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
     <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme"/>
     <link rel="stylesheet" href="css/reveal-override.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
 
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="highlight.js/src/styles/github.css" />
@@ -30,23 +31,30 @@
           <p><a href="https://example.com/link/to/this/talk" target="_blank"
                 id="talk">https://example.com/link/to/this/talk</a></p>
         </section>
-        <section id="intro"
-                 data-markdown="markdown/intro.md"
-                 data-separator="^\n\n\n"
-                 data-separator-vertical="^\n\n"
-                 data-separator-notes="^Note:">
+        <section id="title" data-markdown>
+            <textarea data-template>
+                # Title
+                **Subtitle**
+                ***
+                Speaker name
+
+                Event | Date
+            </textarea>
         </section>
-        <section id="main"
-                 data-markdown="markdown/main.md"
-                 data-separator="^\n\n\n"
-                 data-separator-vertical="^\n\n"
-                 data-separator-notes="^Note:">
-        </section>
-        <section id="conclusion"
-                 data-markdown="markdown/conclusion.md"
-                 data-separator="^\n\n\n"
-                 data-separator-vertical="^\n\n"
-                 data-separator-notes="^Note:">
+        <section>
+            <h2>Slide 2</h2>
+            <div class="flexbox-container">
+                <div>
+                    <ul>
+                        <li>two columns!</li>
+                        <li>with an image</li>
+                        <li>and bullet points!</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="images/Tux.svg" />
+                </div>
+            </div>
         </section>
       </div>
     </div>
@@ -90,12 +98,6 @@ Reveal.initialize({
     progress: false,
     history: true,
     center: true,
-
-    // Parallax background image
-    parallaxBackgroundImage: 'images/background.jpg',
-
-    // Parallax background size
-    parallaxBackgroundSize: '2100px 900px', // CSS syntax, e.g. "2100px 900px"
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
     transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
